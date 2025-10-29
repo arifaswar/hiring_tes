@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Navbar } from "./components/Navbar";
 import AdminPage from "./pages/adminPage";
 import ApplicantPage from "./pages/applicantPage";
 
