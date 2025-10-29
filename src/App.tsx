@@ -8,8 +8,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar role={role} />
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-end mt-4">
         <button
           onClick={() =>
             setRole(role === "admin" ? "applicant" : "admin")

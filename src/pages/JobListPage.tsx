@@ -33,7 +33,7 @@ export const JobListPage = ({
               <div className="flex items-center gap-4">
                 {/* Badge status dinamis */}
                 <span className={`text-xs px-2 py-1 rounded-lg ${statusColor}`}>
-                  {job.status || "Draft"}
+                  {job.status || "Active"}
                 </span>
 
                 {/* Tanggal mulai */}
