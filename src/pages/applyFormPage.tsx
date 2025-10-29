@@ -2,13 +2,8 @@ import { useState } from "react";
 import CameraCaptureModal from "../components/CameraCaptureModal";
 import { supabase } from "../lib/supabaseClient";
 import ApplicationSuccessPage from "./applicationSuccessPage";
+import type { ApplyFormProps } from "../type/type";
 
-type ApplyFormProps = {
-  jobId?: string;
-  jobTitle: string;
-  company: string;
-  onBack: () => void;
-};
 
 export default function ApplyFormPage({
   jobId,

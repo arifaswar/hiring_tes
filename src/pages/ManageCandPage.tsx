@@ -1,21 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabaseClient";
+import type { ManageCandidatePageProps, Candidate } from "../type/type";
 
-type Candidate = {
-  id: string;
-  full_name: string;
-  email: string;
-  phone_number: string;
-  date_of_birth: string;
-  domicile: string;
-  gender: string;
-  linkedin_link: string;
-};
-
-type ManageCandidatePageProps = {
-  job: any;
-  onBack: () => void;
-};
 
 export function ManageCandidatePage({ job, onBack }: ManageCandidatePageProps) {
   const [candidates, setCandidates] = useState<Candidate[]>([]);

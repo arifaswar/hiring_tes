@@ -1,10 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Webcam from "react-webcam";
+import type { CameraCaptureModalProps } from "../type/type";
 
-type CameraCaptureModalProps = {
-  onClose: () => void;
-  onCapture: (photo: string) => void;
-};
 
 export default function CameraCaptureModal({ onClose, onCapture }: CameraCaptureModalProps) {
   const webcamRef = useRef<Webcam>(null);

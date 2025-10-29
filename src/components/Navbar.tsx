@@ -1,8 +1,6 @@
 import { useState, useRef, useEffect } from "react";
+import type { NavbarProps } from "../type/type";
 
-type NavbarProps = {
-  role: "admin" | "applicant";
-};
 
 export const Navbar = ({ role }: NavbarProps) => {
   const [openMenu, setOpenMenu] = useState(false);

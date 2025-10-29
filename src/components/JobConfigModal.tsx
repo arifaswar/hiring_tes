@@ -1,16 +1,7 @@
 import React, { useState, useRef } from "react";
+import type { JobConfigModalProps } from "../type/type";
+import type { FieldConfig } from "../type/type";
 
-interface FieldConfig {
-  key: string;
-  label: string;
-  state: "mandatory" | "optional" | "off";
-}
-
-interface JobConfigModalProps {
-  open: boolean;
-  onClose: () => void;
-  onSuccess: (job: any) => void;
-}
 
 export const JobConfigModal: React.FC<JobConfigModalProps> = ({
   open,

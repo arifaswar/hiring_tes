@@ -2,22 +2,13 @@ import { useState, useEffect } from "react";
 import ApplyFormPage from "./applyFormPage";
 import { Navbar } from "../components/Navbar";
 import { supabase } from "../lib/supabaseClient";
+import type { JobApp } from "../type/type";
 
-type Job = {
-  id?: string;
-  title: string;
-  company: string;
-  location: string;
-  salaryMin: string;
-  salaryMax: string;
-  type: string; // Full-Time, Part-Time, dll
-  description: string | string[];
-};
 
 export default function ApplicantPage() {
-  const [selectedJob, setSelectedJob] = useState<Job | null>(null);
+  const [selectedJob, setSelectedJob] = useState<JobApp | null>(null);
   const [showForm, setShowForm] = useState(false);
-  const [jobs, setJobs] = useState<Job[]>([]);
+  const [jobs, setJobs] = useState<JobApp[]>([]);
   const [appliedJobs, setAppliedJobs] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -58,7 +49,7 @@ export default function ApplicantPage() {
     ? appliedJobs.includes(selectedJob.id)
     : false;
 
-const handleApplyClick = (job: Job) => {
+const handleApplyClick = (job: JobApp) => {
     setSelectedJob(job);
     setShowForm(true);
   };

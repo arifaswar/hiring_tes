@@ -5,15 +5,8 @@ import { JobListPage } from "./JobListPage";
 import { ManageCandidatePage } from "./ManageCandPage";
 import { Navbar } from "../components/Navbar";
 import { supabase } from "../lib/supabaseClient";
+import type { Job } from "../type/type";
 
-type Job = {
-  id: string;
-  title: string;
-  description?: string;
-  created_at?: string;
-  created_by?: string;
-  [key: string]: any;
-};
 
 export default function AdminPage() {
   const [openModal, setOpenModal] = useState(false);
